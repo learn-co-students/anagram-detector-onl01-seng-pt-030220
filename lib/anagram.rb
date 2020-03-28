@@ -9,7 +9,7 @@ class Anagram
 
   def match(some_words)
     word_array = []
-    %w(some_words).each do |elm| #some_words = ["lemon", "apple", "pear"]
+    some_words.each do |elm| #some_words = ["lemon", "apple", "pear"]
       word_array << elm.split("") #word_array = [["l","e","m","o","n"], [], []]
     end
 
@@ -20,12 +20,11 @@ class Anagram
 
     if index_array.length > 0
 
-      anagram = index_array.map {|index| %w(some_words)[index]}
+      anagram = index_array.map {|index| some_words[index]}
       anagram
     else
       return []
     end
-
   end
 
 end
